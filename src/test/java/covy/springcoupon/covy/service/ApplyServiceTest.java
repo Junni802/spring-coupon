@@ -1,4 +1,4 @@
-package covy.springcoupon.covy;
+package covy.springcoupon.covy.service;
 
 import covy.springcoupon.repository.CouponRepository;
 import covy.springcoupon.service.CouponService;
@@ -45,6 +45,7 @@ class ApplyServiceTest {
             executorService.execute(() -> {
                 try {
                     applyService.apply(userId);
+                    applyService.equals(userId);
                 } finally {
                     // count 값을 1 감소
                     latch.countDown();
