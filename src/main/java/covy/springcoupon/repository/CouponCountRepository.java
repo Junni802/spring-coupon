@@ -16,4 +16,9 @@ public class CouponCountRepository {
                 // incr 명령어 호출
                 .increment("coupon-count");
     }
+    
+    // 등록된 key모두 제거(테스트코드용)
+    public void deleteKey(String key) {
+        redisTemplate.delete(key);
+    }
 }
